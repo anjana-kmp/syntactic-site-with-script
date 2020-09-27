@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            font-size: 35px;
+
+        }
+
+        header {
+            font-size: 1.25em;
+            text-transform: capitalize;
+        }
+
+        main {
+            padding: 50px;
+            font-size: 1em;
+        }
+
+        span.menu {
+            text-transform: capitalize;
+            font-size: .8em;
+            border: 1px solid;
+            padding: 0 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #science {
+            text-transform: uppercase;
+        }
+
+        [science] {
+            border: 3px dotted;
+        }
+
+        span {
+            border: 3px dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="menu">Sports</span>
+            <span class="menu">National</span>
+            <span class="menu">International</span>
+            <span class="menu">Editorial</span>
+            <span id="science" science>Science</span>
+            <span class="menu">cartoons</span>
+        </nav>
+
+    </header>
+
+    This is the content
+
+    <main>
+        <article>
+            <header>Header of the news article</header>
+            <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa voluptas eaque a ducimus
+                ipsam qui consequuntur minus, nobis illo illum molestias earum voluptatum blanditiis quaerat odio
+                consectetur doloribus dicta?</section>
+            <figure>
+                <img src="images/reporter.jpg" alt="">
+                <caption>Reporter giving news</caption>
+            </figure>
+        </article>
+    </main>
+    <footer>
+        This is footer
+    </footer>
+    <script>
+        myFunction('this is another message');
+
+        function myFunction(message) {
+            debugger
+            alert('message:' + message)
+            console.log(message)
+            console.warn(message)
+            console.info(message)
+            console.error(message)
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
