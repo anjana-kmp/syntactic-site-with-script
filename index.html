@@ -51,17 +51,17 @@
 <body>
     <header>
         <nav>
-            <span class="menu">Sports</span>
-            <span class="menu">National</span>
-            <span class="menu">International</span>
-            <span class="menu">Editorial</span>
-            <span id="science" science>Science</span>
-            <span class="menu">cartoons</span>
+            <span class="menu" onclick="changeNews(event)">Sports</span>
+            <span class="menu" onclick="changeNews(event)">National</span>
+            <span class="menu" onclick="changeNews(event)">International</span>
+            <span class="menu" onclick="changeNews(event)">Editorial</span>
+            <span id="science" onclick="changeNews(event)" science>Science</span>
+            <span class="menu" onclick="changeNews(event)">cartoons</span>
         </nav>
 
     </header>
 
-    This is the content
+    
 
     <main>
         <article>
@@ -79,20 +79,22 @@
         This is footer
     </footer>
     <script>
-        myFunction('this is another message');
+        // myFunction('this is another message');
+        function changeNews(event){
+            console.log (event.target.innerHTML)
+            var topic=event.target.innerHTML;
+            var header=document.querySelectorAll("header")
+            var newsContent=document.querySelector("section")
+            newsContent.innerHTML="this is my sports content"
+            console.log(header[1])
 
-        function myFunction(message) {
-            debugger
-            alert('message:' + message)
-            console.log(message)
-            console.warn(message)
-            console.info(message)
-            console.error(message)
-
-
-
-
+            
         }
+
+
+
+
+       
     </script>
 
 </body>
