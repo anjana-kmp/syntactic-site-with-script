@@ -61,7 +61,7 @@
 
     </header>
 
-    
+
 
     <main>
         <article>
@@ -80,21 +80,65 @@
     </footer>
     <script>
         // myFunction('this is another message');
-        function changeNews(event){
-            console.log (event.target.innerHTML)
-            var topic=event.target.innerHTML;
-            var header=document.querySelectorAll("header")
-            var newsContent=document.querySelector("section")
-            newsContent.innerHTML="this is my sports content"
+        function changeNews(event) {
+            console.log(event.target.innerHTML)
+            var topic = event.target.innerHTML;
+            var header = document.querySelectorAll("header")[1]
+            var newsContent = document.querySelector("section")
+            var imgvar=document.querySelector("img")
+
+            var mynewsItems = [
+                {
+                    header: "National",
+                    content: "Even though the daily count of COVID-19 cases reported in the State remains at over 3,000, it is better off than many other States that periodically continue to witness an explosion in the number of cases, and that it should still account for 11% of doctors’ death is emerging as a matter of concern.",
+                    imgPath: "./images/national.jpg",
+                    caption: "11% of doctors dying due to COVID-19 are from West Bengal",
+                },
+                {
+                    header: "International",
+                    content: "New Zealanders are to be granted access to Australia in the first opening of international borders by either nation since Covid restrictions were imposed.",
+                    imgPath: "./images/international.jpg",
+                    caption: "Australia opens 'travel zone' to New Zealanders",
+                },
+                {
+                    header: "Science",
+                    content: "In experiments, the physicists deposited blobs of an epoxy material on the chip’s surface around the silicon nitride sheet. When heated with a laser, each epoxy blob gave off sound waves that rippled through the chip to the sheet, causing the sheet to vibrate. The hotter the epoxy blob, the stronger its sound waves, and the more intense the silicon nitride’s vibrations. Bouncing a laser beam off the sheet and measuring the beam’s angle of reflection allowed the researchers to track the sheet’s motion, and therefore the temperatures of the epoxy blobs, Singh and Purdy report in the Sept. 18 Physical Review Letters.",
+                    imgPath: "./images/science.jpg",
+                    caption: "A new thermometer measures temperature with sound",
+                },
+                {
+                    header: "Sports",
+                    content: "IPL 2020 Live Score, CSK vs SRH Live Cricket Match Score Streaming Online Updates: Chennai Super Kings take on Sunrisers Hyderabad in Match 14 of IPL 2020",
+                    imgPath: "./images/sports.jpg",
+                    caption: "IPL 2020 Live Score, CSK vs SRH Live Cricket Score Online: CSK strike early",
+                },
+            ]
+            let dataForpage;
+            if(topic == "National"){
+                dataForpage=mynewsItems[0]
+            }
+            if(topic == "International"){
+                dataForpage=mynewsItems[1]
+            }            
+            if(topic == "Science"){
+                dataForpage=mynewsItems[2]
+            }            
+            if(topic == "Sports"){
+                dataForpage=mynewsItems[3]
+            }
+
+            newsContent.innerHTML = dataForpage.content
+            header.innerHTML=dataForpage.header
+            imgvar.src=dataForpage.imgPath
             console.log(header[1])
 
-            
+
         }
 
 
 
 
-       
+
     </script>
 
 </body>
