@@ -45,6 +45,10 @@
         span {
             border: 3px dashed;
         }
+
+        caption {
+            display: block;
+        }
     </style>
 </head>
 
@@ -85,7 +89,7 @@
             var topic = event.target.innerHTML;
             var header = document.querySelectorAll("header")[1]
             var newsContent = document.querySelector("section")
-            var imgvar=document.querySelector("img")
+            var imgvar = document.querySelector("img")
 
             var mynewsItems = [
                 {
@@ -100,36 +104,60 @@
                     imgPath: "./images/international.jpg",
                     caption: "Australia opens 'travel zone' to New Zealanders",
                 },
+
                 {
                     header: "Science",
                     content: "In experiments, the physicists deposited blobs of an epoxy material on the chip’s surface around the silicon nitride sheet. When heated with a laser, each epoxy blob gave off sound waves that rippled through the chip to the sheet, causing the sheet to vibrate. The hotter the epoxy blob, the stronger its sound waves, and the more intense the silicon nitride’s vibrations. Bouncing a laser beam off the sheet and measuring the beam’s angle of reflection allowed the researchers to track the sheet’s motion, and therefore the temperatures of the epoxy blobs, Singh and Purdy report in the Sept. 18 Physical Review Letters.",
                     imgPath: "./images/science.jpg",
                     caption: "A new thermometer measures temperature with sound",
                 },
+
+
                 {
                     header: "Sports",
                     content: "IPL 2020 Live Score, CSK vs SRH Live Cricket Match Score Streaming Online Updates: Chennai Super Kings take on Sunrisers Hyderabad in Match 14 of IPL 2020",
                     imgPath: "./images/sports.jpg",
                     caption: "IPL 2020 Live Score, CSK vs SRH Live Cricket Score Online: CSK strike early",
                 },
+                {
+                    header: "Editorial",
+                    content: "The government should go the whole hog and scrap the retrospective powers under Section 9 through an amendment to the Income Tax Act as that alone will send a clear signal to foreign investors",
+                    imgPath: "./images/editorial.jpg",
+                    caption: "Vodafone ruling gives government a chance to clear the air",
+                },
+                {
+                    header: "cartoons",
+                    content: "I love my cartoons",
+                    imgPath: "./images/cartoons.jpg",
+                    caption: "Mr.Bean",
+                },
+
             ]
             let dataForpage;
-            if(topic == "National"){
-                dataForpage=mynewsItems[0]
+            if (topic == "National") {
+                dataForpage = mynewsItems[0]
             }
-            if(topic == "International"){
-                dataForpage=mynewsItems[1]
-            }            
-            if(topic == "Science"){
-                dataForpage=mynewsItems[2]
-            }            
-            if(topic == "Sports"){
-                dataForpage=mynewsItems[3]
+            if (topic == "International") {
+                dataForpage = mynewsItems[1]
+            }
+
+            if (topic == "Science") {
+                dataForpage = mynewsItems[2]
+            }
+            if (topic == "Sports") {
+                dataForpage = mynewsItems[3]
+            }
+            if (topic == "Editorial") {
+                dataForpage = mynewsItems[4]
+            }
+            debugger
+            if (topic == "cartoons") {
+                dataForpage = mynewsItems[5]
             }
 
             newsContent.innerHTML = dataForpage.content
-            header.innerHTML=dataForpage.header
-            imgvar.src=dataForpage.imgPath
+            header.innerHTML = dataForpage.header
+            imgvar.src = dataForpage.imgPath
             console.log(header[1])
 
 
